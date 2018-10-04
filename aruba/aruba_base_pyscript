@@ -39,3 +39,4 @@ for device in devices:
     print(output)
 
 print("Script complete.")
+# end of script
