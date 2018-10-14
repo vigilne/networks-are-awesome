@@ -32,7 +32,7 @@ print(lines)
 
 print("Establishing SSH connection to devices and running commands.")
 
-# Loop used to ssh to items in devices list and execute commands
+# Loop used to ssh to devices in device list and execute commands
 for device in devices:
     net_connect = ConnectHandler(**device)
     output = net_connect.send_config_set(lines)
