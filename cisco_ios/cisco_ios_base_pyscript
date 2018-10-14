@@ -1,0 +1,41 @@
+# Imports functions used in script
+import getpass
+from netmiko import ConnectHandler
+
+# Prompts for username and password
+username = input("Enter username: ")
+p = getpass.getpass("Enter password: ")
+
+# Creates empty list to be used later n script for device dictionaries
+devices = []
+
+# Creates list of ip addresses of devices
+ips = ["172.16.1.10", "172.16.2.10", "172.16.1.3"]
+
+# Loop used to generate device dictionaries from ips list and
+# stores dictionary entry in devices list
+for ip in ips:
+    cisco_ios = {
+        'device_type': 'cisco_ios',
+        'ip': ip,
+        'username': username,
+        'password': p,
+    }
+    devices.append(cisco_ios)
+
+print("Opening commands from text file.")
+
+# opens file containing commands to be run on devices
+with open('commands.txt') as c:
+    lines = c.read().splitlines()
+print(lines)
+
+print("Establishing SSH connection to devices and running commands.")
+
+# Loop used to ssh to items in devices list and execute commands
+for device in devices:
+    net_connect = ConnectHandler(**device)
+    output = net_connect.send_config_set(lines)
+    print(output)
+
+print("Script complete.")
