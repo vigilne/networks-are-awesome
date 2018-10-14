@@ -1,0 +1,3 @@
+This folder contains a collection of python scripts used with cisco ios switches.
+
+csico_ios_base_pyscript - This script will run commands from a text file against multiple cisco ios switches
