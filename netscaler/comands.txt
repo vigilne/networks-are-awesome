@@ -1,2 +1,2 @@
-rm system backup backup.tgz
-create system backup backup -level full
+rm system backup backupfile.tgz
+create system backup backupfile -level full
