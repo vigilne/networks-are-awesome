@@ -1,6 +1,6 @@
 This folder contains a collection of python scripts used with Fortinet Fortigate firewalls FortiOS.
 
-fortiate_backup.py - This script will copy the running configuration file from the fortigate to a text file on a server
+fortigate_backup.py - This script will copy the running configuration file from the fortigate to a text file on a server
                      and append a date stamp to the file. This script includes exception handling for devices that fail
                      to authenticate or time out when trying to connect. The script requires a seperate text file containing
                      ip addresses of the firewalls to connect to.
