@@ -1,1 +1,4 @@
 This folder contains scripts to be used with Citrix NetScaler load balancer devices.
+
+netscaler_bkup.py - This script will perform a full backup of a NetScaler device and copy the .tgz file via scp to a server.
+                    It will append a date time stamp to the filename.
