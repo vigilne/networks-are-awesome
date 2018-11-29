@@ -1,3 +1,5 @@
 This folder contains a collection of python scripts used with HPe Aruba switches and wireless controllers running ArubaOS.
 
 aruba_base_pyscript - This script will run a set of commands from a text file against multiple aruba switches
+
+aruba_wlc_backup.py - This script will conduct a backup of the flash file system on an Aruba wireless controller to a ftp server
